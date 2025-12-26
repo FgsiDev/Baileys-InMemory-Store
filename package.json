@@ -1,6 +1,6 @@
 {
   "name": "baileys-inmemory-store",
-  "version": "1.0.2",
+  "version": "1.0.2-beta",
   "description": "Lightweight single-file In-Memory Store for Baileys WhatsApp library (no TypeScript, no extra deps)",
   "main": "index.js",
   "type": "module",
