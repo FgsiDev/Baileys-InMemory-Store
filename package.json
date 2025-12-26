@@ -1,0 +1,29 @@
+{
+  "name": "baileys-inmemory-store",
+  "version": "1.0.2",
+  "description": "Lightweight single-file In-Memory Store for Baileys WhatsApp library (no TypeScript, no extra deps)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "homepage": "https://github.com/FgsiDev/Baileys-InMemory-Store",
+  "repository": {
+    "url": "git@github.com:FgsiDev/Baileys-InMemory-Store.git"
+  },
+  "keywords": [
+    "baileys",
+    "whatsapp",
+    "whatsapp-bot",
+    "baileys-store",
+    "inmemory-store",
+    "store",
+    "javascript",
+    "esm"
+  ],
+  "author": "FgsiDev",
+  "license": "ISC",
+  "dependencies": {
+    "sql.js": "^1.13.0"
+  }
+}
