@@ -17,7 +17,7 @@ No TypeScript, no additional dependencies, just one package to use.
   <li>📂 Chats, Messages, Contacts, Groups</li>
   <li>🧠 In-memory store (fast & light)</li>
   <li>🔄 Auto sync via <code>ev</code> Baileys</li>
-  <li>💾 Save & Load JSON</li>
+  <li>💾 Save & Load JSON/SQLITE/BROTLI</li>
   <li>🏷️ Label & Label Association</li>
   <li>🟢 Presence tracking</li>
 </ul>
@@ -37,6 +37,8 @@ No TypeScript, no additional dependencies, just one package to use.
   <li><code>readFromFile(path)</code></li>
   <li><code>writeToFileSqlite(path)</code></li>
   <li><code>readFromFileSqlite(path)</code></li>
+  <li><code>writeToFileBrotli(path)</code></li>
+  <li><code>readFromFileBrotli(path)</code></li>
   <li><code>writeToFileAuto(path)</code></li>
   <li><code>readFromFileAuto(path)</code></li>
 </ul>
@@ -75,20 +77,31 @@ store.readFromFile("./store.json")
 <h3>💾 Save / Load ( Sqlite )</h3>
 
 <pre><code class="language-js">
-store.writeToFileSqlite("./store.db")
-store.readFromFileSqlite("./store.db")
+store.writeToFileSqlite("./store.db") //Promise
+store.readFromFileSqlite("./store.db") //Promise
+</code></pre>
+
+<h3>💾 Save / Load ( BROTLI )</h3>
+
+<pre><code class="language-js">
+store.writeToFileBrotli("./store.br") //Promise
+store.readFromFileBrotli("./store.br") //Promise
 </code></pre>
 
 <h3>💾 Save / Load ( AUTO )</h3>
 
 <pre><code class="language-js">
-store.writeToFileAuto("./store.json")
+store.writeToFileAuto("./store.json") //Promise
 // Or
-store.writeToFileAuto("./store.db")
+store.writeToFileAuto("./store.db") //Promise
+// Or
+store.writeToFileAuto("./store.br") //Promise
 
-store.readFromFileAuto("./store.json")
+store.readFromFileAuto("./store.json") //Promise
 // Or
-store.readFromFileAuto("./store.db")
+store.readFromFileAuto("./store.db") //Promise
+// Or
+store.readFromFileAuto("./store.br") //Promise
 </code></pre>
 
 <h3>👤 Credit</h3>

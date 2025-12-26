@@ -24,6 +24,7 @@
   "author": "FgsiDev",
   "license": "ISC",
   "dependencies": {
-    "sql.js": "^1.13.0"
+    "sql.js": "^1.13.0",
+    "zlib": "^1.0.5"
   }
 }
