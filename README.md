@@ -19,6 +19,7 @@ No TypeScript, no additional dependencies, just one package to use.
   <li>🔄 Auto sync via <code>ev</code> Baileys</li>
   <li>💾 Save & Load JSON/SQLITE/BROTLI</li>
   <li>🏷️ Label & Label Association</li>
+  <li>🔖 Label Member</li>
   <li>🟢 Presence tracking</li>
 </ul>
 
@@ -54,7 +55,7 @@ const sock = baileys.makeWASocket({
   // config
 })
 
-const store = InMemoryStore()
+const store = new InMemoryStore()
 store.bind(sock.ev)
 
 // take the last message
