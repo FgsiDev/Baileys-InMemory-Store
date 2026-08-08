@@ -34,6 +34,8 @@ No TypeScript, no additional dependencies, just one package to use.
   <li><code>getLabels()</code></li>
   <li><code>getChatLabels(chatId)</code></li>
   <li><code>getMessageLabels(messageId)</code></li>
+  <li><code>getGroupLabelMember(chat, jid)</code></li>
+  <li><code>getGroupLabelMembers(chat)</code></li>
   <li><code>writeToFile(path)</code></li>
   <li><code>readFromFile(path)</code></li>
   <li><code>writeToFileSqlite(path)</code></li>
@@ -61,11 +63,34 @@ store.bind(sock.ev)
 // take the last message
 const msg = store.mostRecentMessage(jid)
 
-// load some messages
+// take the last 20 messages
 store.loadMessages(jid, 20)
 
+// load messages before a specific message
+const before = store.loadMessages(jid, 20, {
+  before: {
+    id: messageId
+  }
+});
+
+// load messages after a specific message
+const after = store.loadMessages(jid, 20, {
+  afterr: {
+    id: messageId
+  }
+});
+
+// load messages before a specific message
+// `id` defaults to before
+const messagesBefore = store.loadMessages(jid, 20, {
+  id: messageId
+});
+
 // load 1 message
-store.loadMessage(jid, messageId)
+const msg = store.loadMessage(jid, messageId);
+
+// take the most recent message
+const recent = store.mostRecentMessage(jid);
 </code></pre>
 
 <h3>💾 Save / Load ( JSON )</h3>
